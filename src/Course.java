@@ -8,8 +8,10 @@ public class Course {
     private ArrayList<Professor> professors;
     private ArrayList<TA> tas;
     private ArrayList<Student> students;
+    private ArrayList<Exam> exams;
+    private ArrayList<Project> projects;
 
-    public Course(int id, String name, int capacity, Professor professor) {
+    public Course(int id, String name, int capacity, Professor professor, Exam exam) {
         this.id = id;
         this.name = name;
         this.maxCapacity = capacity;
@@ -17,6 +19,14 @@ public class Course {
         professors = new ArrayList<>();
         tas = new ArrayList<>();
         students = new ArrayList<>();
+        exams = new ArrayList<>();
+        projects = new ArrayList<>();
+
+        exams.add(exam);
+    }
+
+    public Course() {
+        this(-1, "Unknown", -1, new Professor(), new Exam());
     }
 
     public void enroll(Student student) {

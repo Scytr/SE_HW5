@@ -2,11 +2,13 @@ import java.util.ArrayList;
 
 public class TA {
     private String name;
-    public ArrayList<Course> courses;
+    private ArrayList<Course> courses;
+    private ArrayList<Exam> exams;
 
     public TA(String name) {
         this.name = name;
         this.courses = new ArrayList<>();
+        this.exams = new ArrayList<>();
     }
 
     public TA() {

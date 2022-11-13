@@ -9,7 +9,15 @@ public class Question {
         this.id = id;
     }
 
+    public String getTask() {
+        return task;
+    }
+
     public int getMaxValue() {
         return maxValue;
+    }
+
+    public int getId() {
+        return id;
     }
 }

@@ -3,11 +3,12 @@ import java.util.ArrayList;
 public class Project {
     private Course course;
     private String name;
-    private ArrayList<Student> students;
+    private ArrayList<Student> members;
 
     public Project(Course course, String name) {
         this.course = course;
         this.name = name;
+        this.members = new ArrayList<>();
     }
 
     public String getName() {
@@ -19,10 +20,10 @@ public class Project {
     }
 
     public void addMember(Student student) {
-        students.add(student);
+        members.add(student);
     }
 
     public Student[] getMembers() {
-        return students.toArray(new Student[students.size()]);
+        return members.toArray(new Student[members.size()]);
     }
 }

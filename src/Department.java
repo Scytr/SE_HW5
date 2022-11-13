@@ -11,6 +11,10 @@ public class Department {
         this.employees = new ArrayList<>();
     }
 
+    public Department() {
+        this("Unknown");
+    }
+
     public boolean addCourse(Course course) {
         return this.courses.add(course);
     }

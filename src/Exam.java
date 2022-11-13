@@ -4,11 +4,13 @@ public class Exam {
     private int maxValue;
     private ArrayList<Question> questions;
     private ArrayList<Student> students;
+    private Course course;
 
-    private Exam() {
+    public Exam() {
         this.maxValue = 0;
         this.questions = new ArrayList<>();
         this.students = new ArrayList<>();
+        this.course = null;
     }
 
     public Exam(Question question) {
@@ -42,5 +44,29 @@ public class Exam {
 
     public void addQuestion(int id, String task, int value) {
         this.addQuestion(new Question(id, task, value));
+    }
+
+    public Student[] getRegisteredStudents() {
+        return students.toArray(new Student[students.size()]);
+    }
+
+    public void setMaxValue(int maxValue) {
+        this.maxValue = maxValue;
+    }
+
+    public int getMaxValue() {
+        return maxValue;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public Question[] getQuestions() {
+        return questions.toArray(new Question[questions.size()]);
     }
 }
